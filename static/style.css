@@ -48,7 +48,7 @@ body.login-page {
     left: 0;
     width: 200px;           /* largura normal */
     height: 100%;
-    background-color: rgba(4, 16, 126, 0.9); /* azul escuro com 80% de opacidade */
+    background-color: rgba(4, 16, 126, 0.9); /* azul escuro com 90% de opacidade */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -116,9 +116,41 @@ body.interna {
     padding: 10px;
     border-radius: 8px;
 
-    width: 500px;       /* largura fixa */
-    /* ou você pode usar porcentagem */
-    /* width: 50%; */
+    width: 1400px;       /* largura fixa */
+    display: block;     /* obrigatório pra largura funcionar */
+}
 
-    display: block;     /* obrigatório para largura funcionar */
+.content {
+
+text-align: center;
+
+
+}
+
+.content h1 {
+
+color: #061ce2;
+
+}
+
+.talk {
+
+ border: 2px solid #000000;
+    background-color: #fdfdff;
+    padding: 10px;
+    border-radius: 8px;
+
+    width: 1400px;       /* largura fixa */
+    height: 700px;
+    display: block;
+margin-left: 100px;
+text-align: center;
+
+
+}
+
+.talk h1 {
+
+color: #061ce2;
+
 }

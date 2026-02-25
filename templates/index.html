@@ -4,23 +4,24 @@
 <meta charset="UTF-8">
 <title>Index</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<meta lang="pt-br">
 </head>
 <body class="interna">
 
 <button id="toggle-btn" onclick="toggleSidebar()">☰</button>
 
-<div class="sidebar" id="sidebar">
+<div class="sidebar" id="sidebar">  <!-- links da sidebar aqui -->
     <div class="links-superiores">
-        <a href="/index">Início</a>
-        <a href="/chat">Chat</a>
-        <a href="/avisos">Avisos</a>
-        <a href="/perfil">Perfil</a>
+        <a href="/index"> <img src=static/home.png alt=logo width="30">   Início</a>
+        <a href="/chat">  <img src=static/chat.png alt=logo width="30"> Chat</a>
+        <a href="/avisos"> <img src=static/atencao.png alt=logo width="30"> Avisos </a>
+        <a href="/perfil"> <img src=static/profile.png alt=logo width="30"> Perfil</a>
     </div>
     <a href="/" class="sair">Sair</a>
 </div>
 
 <div class="content" id="content">
-    <h2>Página Inicial</h2>
+    <h1>Página Inicial</h1>
     <p>Bem-vindo ao sistema!</p>
 </div>
 
