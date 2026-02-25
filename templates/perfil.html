@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Perfil</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+
+<button id="toggle-btn">☰</button>
+
+
+<div class="sidebar" id="sidebar">
+    <div class="links-superiores">
+        <a href="/index">Início</a>
+        <a href="/chat">Chat</a>
+        <a href="/avisos">Avisos</a>
+        <a href="/perfil">Perfil</a>
+    </div>
+    <a href="/" class="sair">Sair</a>
+</div>
+
+
+
+<div id="content" class="content">
+
+<div class="main-box">
+
+<h1>Perfil</h1>
+
+<p>Perfil do usuário em construção.</p>
+
+</div>
+
+</div>
+
+
+
+<script>
+
+const btn = document.getElementById("toggle-btn");
+
+const sidebar = document.getElementById("sidebar");
+
+const content = document.getElementById("content");
+
+btn.onclick = function(){
+
+sidebar.classList.toggle("fechada");
+
+content.classList.toggle("expandido");
+
+}
+
+</script>
+
+
+</body>
+
+</html>
+
+<body class="interna"></body>

@@ -1,0 +1,124 @@
+body.login-page {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.login-container {
+    padding: 20px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    width: 300px; /* define largura fixa */
+    max-width: 90%;
+}
+
+.login-container .logo {
+    width: 300px;       /* ajusta o tamanho da logo */
+    margin-bottom: 10px; /* espaço entre a logo e o título */
+}
+
+.login-container button {
+    background-color: #0a84ff;  /* cor do botão */
+    color: white;               /* cor do texto */
+    border: none;               /* sem borda padrão */
+    padding: 10px 20px;         /* tamanho do botão */
+    border-radius: 50px;        /* deixa totalmente arredondado */
+    font-size: 16px;            /* tamanho da fonte */
+    cursor: pointer;            /* muda o cursor ao passar o mouse */
+    transition: background 0.3s;
+}
+
+.login-container button:hover {
+    background-color: #0066cc;  /* cor ao passar o mouse */
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;           /* largura normal */
+    height: 100%;
+    background-color: rgba(4, 16, 126, 0.9); /* azul escuro com 80% de opacidade */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 20px;
+    transition: transform 0.3s; /* animação para sumir */
+    border-right: 3px solid rgb(0, 174, 255);
+    border-radius: 10px;
+}
+
+/* Classe que fecha a sidebar */
+.sidebar.fechada {
+    transform: translateX(-100%); /* desloca totalmente para a esquerda */
+}
+
+/* Links da sidebar */
+.sidebar a {
+    display: block;
+    color: rgb(3, 247, 255);
+    text-decoration: none;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 0 0 3px black;
+}
+
+.sidebar a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar a.sair {
+    background: #000000;
+    text-align: center;
+    border-radius: 8px;
+    margin: 5px;
+    margin-bottom: 30px;
+}
+
+.sidebar a.sair:hover {background-color:#cccccc9c /* azul escuro com 80% de opacidade */}
+
+/* Conteúdo */
+.content { margin-left:200px; padding:10px; transition: margin-left 0.3s; }
+.content.expandido { margin-left:50px; }
+
+/* Chat */
+#chat-box { border:1px solid #ccc; padding:10px; height:300px; overflow-y:auto; background:white; border-radius:8px; }
+.mensagem { background:#e0e0e0; margin:5px; padding:8px; border-radius:8px; }
+
+/* Botão hamburguer */
+#toggle-btn { position:fixed; top:10px; left:10px; z-index:1000; font-size:20px; cursor:pointer; }
+
+body.interna {
+    background: url('fundo.webp') no-repeat center center fixed; /* imagem de fundo */
+    background-size: cover;   /* cobre toda a tela */
+    margin: 0;
+    font-family: sans-serif;
+    min-height: 100vh;
+}
+
+
+.content {
+    border: 2px solid #000000;
+    background-color: #fdfdff;
+    padding: 10px;
+    border-radius: 8px;
+
+    width: 500px;       /* largura fixa */
+    /* ou você pode usar porcentagem */
+    /* width: 50%; */
+
+    display: block;     /* obrigatório para largura funcionar */
+}

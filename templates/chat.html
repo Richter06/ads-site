@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Chat</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<button id="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+<div class="sidebar" id="sidebar">
+    <div class="links-superiores">
+        <a href="/index">Início</a>
+        <a href="/chat">Chat</a>
+        <a href="/avisos">Avisos</a>
+        <a href="/perfil">Perfil</a>
+    </div>
+    <a href="/" class="sair">Sair</a>
+</div>
+
+<div class="content" id="content">
+    <h2>Chat</h2>
+    <div id="chat-box"></div>
+    <input type="text" id="mensagem" placeholder="Digite...">
+    <button onclick="enviar()">Enviar</button>
+</div>
+
+<script>
+function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    const content = document.getElementById("content");
+    sidebar.classList.toggle("fechada");
+    content.classList.toggle("expandido");
+}
+
+function enviar() {
+    let msg = document.getElementById("mensagem").value;
+    fetch("/enviar", {
+        method:"POST",
+        headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({mensagem: msg})
+    }).then(()=> {
+        document.getElementById("mensagem").value="";
+        carregar();
+    });
+}
+
+function carregar() {
+    fetch("/mensagens")
+    .then(r => r.json())
+    .then(d => {
+        let chat = document.getElementById("chat-box");
+        chat.innerHTML = "";
+        d.forEach(m => { chat.innerHTML += "<div class='mensagem'><p>"+m+"</p></div>"; });
+        chat.scrollTop = chat.scrollHeight;
+    });
+}
+
+carregar();
+</script>
+
+</body>
+</html>
+
+<body class="interna"></body>

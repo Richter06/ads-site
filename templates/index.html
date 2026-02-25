@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Index</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="interna">
+
+<button id="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+<div class="sidebar" id="sidebar">
+    <div class="links-superiores">
+        <a href="/index">Início</a>
+        <a href="/chat">Chat</a>
+        <a href="/avisos">Avisos</a>
+        <a href="/perfil">Perfil</a>
+    </div>
+    <a href="/" class="sair">Sair</a>
+</div>
+
+<div class="content" id="content">
+    <h2>Página Inicial</h2>
+    <p>Bem-vindo ao sistema!</p>
+</div>
+
+<script>
+function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    const content = document.getElementById("content");
+    sidebar.classList.toggle("fechada");
+    content.classList.toggle("expandido");
+}
+</script>
+
+</body>
+</html>
+
+
