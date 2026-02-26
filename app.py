@@ -1,10 +1,13 @@
 from flask import Flask, render_template, request, jsonify, redirect, url_for
+import os
 
 app = Flask(__name__)
 
+# armazenamento das msgs
 mensagens = []
 
-# LOGIN
+#login page
+
 @app.route("/")
 def login():
     return render_template("login.html")
@@ -13,27 +16,35 @@ def login():
 def entrar():
     return redirect(url_for("index"))
 
-# INDEX
+#index page
+
 @app.route("/index")
 def index():
     return render_template("index.html")
 
-# CHAT
+
+# chat page
+
 @app.route("/chat")
 def chat():
     return render_template("chat.html")
 
-# AVISOS
+
+# avisos page
+
 @app.route("/avisos")
 def avisos():
     return render_template("avisos.html")
 
-# PERFIL
+# perfil page
+
 @app.route("/perfil")
 def perfil():
     return render_template("perfil.html")
 
-# CHAT FUNCIONAL
+
+# chat
+
 @app.route("/enviar", methods=["POST"])
 def enviar():
     data = request.get_json()
@@ -46,5 +57,10 @@ def enviar():
 def get_mensagens():
     return jsonify(mensagens)
 
+
+# Roda o Flask
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    # Render define a porta automaticamente
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
