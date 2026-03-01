@@ -14,32 +14,43 @@ body.login-page {
 
 .login-container {
     padding: 20px;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     text-align: center;
     color: white;
-    width: 300px; /* define largura fixa */
+    width: 300px;
+    /* define largura fixa */
     max-width: 90%;
 }
 
 .login-container .logo {
-    width: 300px;       /* ajusta o tamanho da logo */
-    margin-bottom: 10px; /* espaço entre a logo e o título */
+    width: 300px;
+    /* ajusta o tamanho da logo */
+    margin-bottom: 10px;
+    /* espaço entre a logo e o título */
 }
 
 .login-container button {
-    background-color: #0a84ff;  /* cor do botão */
-    color: white;               /* cor do texto */
-    border: none;               /* sem borda padrão */
-    padding: 10px 20px;         /* tamanho do botão */
-    border-radius: 50px;        /* deixa totalmente arredondado */
-    font-size: 16px;            /* tamanho da fonte */
-    cursor: pointer;            /* muda o cursor ao passar o mouse */
+    background-color: #0a84ff;
+    /* cor do botão */
+    color: white;
+    /* cor do texto */
+    border: none;
+    /* sem borda padrão */
+    padding: 10px 20px;
+    /* tamanho do botão */
+    border-radius: 50px;
+    /* deixa totalmente arredondado */
+    font-size: 16px;
+    /* tamanho da fonte */
+    cursor: pointer;
+    /* muda o cursor ao passar o mouse */
     transition: background 0.3s;
 }
 
 .login-container button:hover {
-    background-color: #0066cc;  /* cor ao passar o mouse */
+    background-color: #0066cc;
+    /* cor ao passar o mouse */
 }
 
 .sidebar {
@@ -47,21 +58,24 @@ body.login-page {
     z-index: 1000;
     top: 0;
     left: 0;
-    width: 200px;           /* largura normal */
+    width: 200px;
+    /* largura normal */
     height: 100%;
-    background-color: rgba(4, 16, 126, 0.9); /* azul escuro com 90% de opacidade */
+    background-color: rgba(11, 11, 12, 0.9);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding-top: 20px;
-    transition: transform 0.3s; /* animação para sumir */
+    transition: transform 0.3s;
+    /* animação para sumir */
     border-right: 3px solid rgb(0, 174, 255);
     border-radius: 10px;
 }
 
 /* Classe que fecha a sidebar */
 .sidebar.fechada {
-    transform: translateX(-100%); /* desloca totalmente para a esquerda */
+    transform: translateX(-100%);
+    /* desloca totalmente para a esquerda */
 }
 
 /* Links da sidebar */
@@ -78,7 +92,7 @@ body.login-page {
 }
 
 .sidebar a:hover {
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .sidebar a.sair {
@@ -89,22 +103,55 @@ body.login-page {
     margin-bottom: 30px;
 }
 
-.sidebar a.sair:hover {background-color:#cccccc9c /* azul escuro com 80% de opacidade */}
+.sidebar a.sair:hover {
+    background-color: #cccccc9c
+        /* azul escuro com 80% de opacidade */
+}
 
 /* Conteúdo */
-.content { margin-left:200px; padding:10px; transition: margin-left 0.3s; }
-.content.expandido { margin-left:50px; }
+.content {
+    margin-left: 200px;
+    padding: 10px;
+    transition: margin-left 0.3s;
+}
+
+.content.expandido {
+    margin-left: 50px;
+}
 
 /* Chat */
-#chat-box { border:1px solid #ccc; padding:10px; height:300px; overflow-y:auto; background:white; border-radius:8px; }
-.mensagem { background:#e0e0e0; margin:5px; padding:8px; border-radius:8px; }
+#chat-box {
+    border: 1px solid #01c2fd;
+    padding: 10px; 
+    /* altura removida; usa flex para preencher */
+    overflow-y: auto;
+    background: rgb(44, 43, 43);
+    border-radius: 8px;
+    flex: 1;
+}
+
+.mensagem {
+    background: #b1aeaec9;
+    margin: 5px;
+    padding: 8px;
+    border-radius: 8px;
+}
 
 /* Botão hamburguer */
-#toggle-btn { position:relative; top:10px; left:10px; z-index:1100; font-size:20px; cursor:pointer; }
+#toggle-btn {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    z-index: 1100;
+    font-size: 20px;
+    cursor: pointer;
+}
 
 body.interna {
-    background: url('fundo.webp') no-repeat center center fixed; /* imagem de fundo */
-    background-size: cover;   /* cobre toda a tela */
+    background: url('fundo.webp') no-repeat center center fixed;
+    /* imagem de fundo */
+    background-size: cover;
+    /* cobre toda a tela */
     margin: 0;
     font-family: sans-serif;
     min-height: 100vh;
@@ -116,56 +163,75 @@ body.interna {
     padding: 10px;
     border-radius: 8px;
 
-    width: 1400px;       /* largura fixa */
-    display: block;     /* obrigatório pra largura funcionar */
+    width: 1400px;
+    /* largura fixa */
+    display: block;
+    /* obrigatório pra largura funcionar */
 }
 
 .content {
 
-text-align: center;
+    text-align: center;
 
 
 }
 
 .content h1 {
 
-color: #061ce2;
+    color: #061ce2;
 
 }
 
 .talk {
-
- border: 2px solid #000000;
-    background-color: #fdfdff;
+    border: 2px solid #0de4e4;
+    background-color: #050505;
     padding: 10px;
     border-radius: 8px;
 
-    width: 1400px;       /* largura fixa */
-    height: 700px;
-    display: block;
-margin-left: 100px;
-text-align: center;
+    width: 500px; /* largura fixa */
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1070px;
+    text-align: center;
+    margin-bottom: 100px;
+}
 
+/* input row dentro da caixa de conversa */
+.input-row {
+    display: flex;
+    padding: 5px;
+    width: 50;
+}
 
+.input-row #mensagem {
+    flex: 1;
+    font-size: 16px;
+    padding: 8px;
+}
+
+.input-row button {
+    margin-left: 10px;
+    padding: 8px 16px;
 }
 
 .talk h1 {
 
-color: #061ce2;
+    color: #0de4e4;
 
 }
 
 .carrossel {
 
-width: 600px;
-height: 300px;
+    width: 600px;
+    height: 300px;
 
 
-margin: 40px auto;
+    margin: 40px auto;
 
-position: relative;
-z-index: 1;
-overflow: hidden;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
 
 
 }
@@ -174,59 +240,59 @@ overflow: hidden;
 
 .slides {
 
-display: flex;
-width: 100%;
-height: 100%;
-transition: transform 0.5s ease;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
 
 }
 
 .slide {
 
-min-width: 100%;
-height: 100%;
+    min-width: 100%;
+    height: 100%;
 
 }
 
 .slide img {
 
-width: 100%;
-height: 100%;
+    width: 100%;
+    height: 100%;
 
-object-fit: contain;
+    object-fit: contain;
 
 }
 
-   .carrossel button {
+.carrossel button {
 
     z-index: 5;
 
-position: absolute;
+    position: absolute;
 
-top: 50%;
+    top: 50%;
 
-transform: translateY(-50%);
+    transform: translateY(-50%);
 
-font-size: 30px;
+    font-size: 30px;
 
-  background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
 
-  color: white;
+    color: white;
 
-  border: none;
+    border: none;
 
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .prev {
 
 
-left: 10px;
+    left: 10px;
 
 }
 
 .next {
 
-right: 10px;
+    right: 10px;
 
 }
