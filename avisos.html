@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Avisos • Portal ADS</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="avisos.css">
+
+</head>
+
+<body>
+
+  <div class="matrix-bg" id="matrix"></div>
+
+  <header class="header">
+
+    <div class="logo-area">
+
+      <span class="logo-icon">⌘</span>
+
+      <div>
+        <h2>Portal ADS</h2>
+        <p>Feed de Avisos</p>
+      </div>
+
+    </div>
+
+    <nav>
+
+      <a href="home.html">Home</a>
+        <a href="aulas.html">Aulas</a>
+      <a href="#">Materiais</a>
+      <a href="#">Eventos</a>
+
+    </nav>
+
+  </header>
+
+  <main>
+
+    <section class="feed-header">
+
+      <span class="status">
+        ● ATUALIZAÇÕES DA TURMA
+      </span>
+
+      <h1>
+        Feed de Avisos
+      </h1>
+
+      <p>
+        Comunicados, eventos, provas e atualizações da turma em tempo real.
+      </p>
+
+    </section>
+
+    <section class="feed-container">
+
+      <!-- POST TEXTO -->
+
+      <article class="post-card">
+
+        <div class="post-top">
+
+          <div class="user">
+
+            <div class="avatar">
+              A
+            </div>
+
+            <div>
+              <h3>Administração ADS</h3>
+              <span>Hoje • 19:20</span>
+            </div>
+
+          </div>
+
+          <span class="tag urgent">
+            URGENTE
+          </span>
+
+        </div>
+
+        <div class="post-content">
+
+          <p>
+            A aula de Banco de Dados foi transferida para o laboratório 04 devido manutenção no LAB-02.
+          </p>
+
+        </div>
+
+      </article>
+
+      <!-- POST COM IMAGEM -->
+
+      <article class="post-card">
+
+        <div class="post-top">
+
+          <div class="user">
+
+            <div class="avatar green">
+              E
+            </div>
+
+            <div>
+              <h3>Equipe de Eventos</h3>
+              <span>Ontem • 21:03</span>
+            </div>
+
+          </div>
+
+          <span class="tag">
+            EVENTO
+          </span>
+
+        </div>
+
+        <div class="post-image">
+
+          <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop" alt="Evento ADS">
+
+        </div>
+
+        <div class="post-content">
+
+          <p>
+            Inscrições abertas para o Hackathon ADS 2026 🚀
+          </p>
+
+        </div>
+
+      </article>
+
+      <!-- POST SOMENTE IMAGEM -->
+
+      <article class="post-card">
+
+        <div class="post-top">
+
+          <div class="user">
+
+            <div class="avatar purple">
+              M
+            </div>
+
+            <div>
+              <h3>Monitoria Front-End</h3>
+              <span>2 horas atrás</span>
+            </div>
+
+          </div>
+
+          <span class="tag">
+            MATERIAL
+          </span>
+
+        </div>
+
+        <div class="post-image">
+
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop" alt="Material">
+
+        </div>
+
+        <div class="post-content">
+
+          <p>
+            Novo material de responsividade disponível no Drive da turma.
+          </p>
+
+        </div>
+
+      </article>
+
+      <!-- POST LONGO -->
+
+      <article class="post-card">
+
+        <div class="post-top">
+
+          <div class="user">
+
+            <div class="avatar blue">
+              P
+            </div>
+
+            <div>
+              <h3>Professor Marcelo</h3>
+              <span>3 dias atrás</span>
+            </div>
+
+          </div>
+
+          <span class="tag">
+            PROVA
+          </span>
+
+        </div>
+
+        <div class="post-content">
+
+          <p>
+            A avaliação de Engenharia de Software abordará SCRUM, Kanban, levantamento de requisitos e documentação UML. Estudem os slides enviados no SIGAA e o conteúdo compartilhado na última aula.
+          </p>
+
+        </div>
+
+      </article>
+
+    </section>
+
+  </main>
+
+  <script src="avisos.js"></script>
+
+</body>
+</html>

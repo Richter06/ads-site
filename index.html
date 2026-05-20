@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>ADS Uninassau</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+  <div class="matrix-bg" id="matrix"></div>
+
+  <div class="login-container">
+
+    <div class="logo">⌘</div>
+
+    <h1>Turma de ADS</h1>
+
+    <p class="subtitle">
+      Entre no sistema com suas credenciais
+    </p>
+
+    <form>
+
+      <div class="input-group">
+        <label>Email</label>
+
+        <input
+          type="email"
+          placeholder="Digite seu email"
+        >
+      </div>
+
+      <div class="input-group">
+        <label>Senha</label>
+
+        <input
+          type="password"
+          placeholder="Digite sua senha"
+        >
+      </div>
+
+      <div class="options">
+
+        <label class="remember">
+
+          <input type="checkbox">
+
+          Lembrar login
+
+        </label>
+
+        <a href="#" class="forgot">
+          Esqueceu?
+        </a>
+
+      </div>
+
+      <button class="login-btn" type="button" onclick="entrar()">
+        Entrar no Sistema
+      </button>
+
+    </form>
+
+    <div class="register">
+
+      Não possui acesso?
+
+      <a href="#">
+        Criar conta
+      </a>
+
+    </div>
+
+  </div>
+
+  <script src="index.js"></script>
+
+</body>
+</html>

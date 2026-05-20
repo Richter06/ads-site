@@ -1,0 +1,358 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:
+  radial-gradient(circle at top, #0c1b11 0%, #030503 45%);
+
+  color:white;
+
+  font-family:'Inter', sans-serif;
+
+  min-height:100vh;
+
+  overflow-x:hidden;
+
+  position:relative;
+}
+
+/* MATRIX */
+
+.matrix-bg{
+  position:fixed;
+  inset:0;
+
+  overflow:hidden;
+
+  z-index:0;
+
+  pointer-events:none;
+}
+
+.matrix-bg span{
+  position:absolute;
+
+  top:-100%;
+
+  color:#00ff88;
+
+  opacity:0.07;
+
+  font-family:'Share Tech Mono', monospace;
+
+  animation:fall linear infinite;
+}
+
+@keyframes fall{
+
+  100%{
+    transform:translateY(200vh);
+  }
+
+}
+
+/* HEADER */
+
+.header{
+  width:100%;
+
+  padding:22px 8%;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  position:sticky;
+  top:0;
+
+  z-index:100;
+
+  background:rgba(2, 5, 2, 0.78);
+
+  backdrop-filter:blur(14px);
+
+  border-bottom:1px solid rgba(0,255,136,0.08);
+}
+
+.logo-area{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.logo-icon{
+  width:50px;
+  height:50px;
+
+  border-radius:16px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  background:rgba(0,255,136,0.08);
+
+  border:1px solid rgba(0,255,136,0.12);
+
+  color:#00ff88;
+
+  font-size:1.4rem;
+}
+
+.logo-area p{
+  color:#7d8b80;
+  font-size:0.85rem;
+}
+
+nav{
+  display:flex;
+  gap:28px;
+}
+
+nav a{
+  color:#c7d1ca;
+
+  text-decoration:none;
+
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#00ff88;
+}
+
+/* MAIN */
+
+main{
+  position:relative;
+  z-index:2;
+
+  width:100%;
+
+  padding:60px 0;
+}
+
+/* HEADER FEED */
+
+.feed-header{
+  width:min(800px, 92%);
+
+  margin:auto;
+
+  margin-bottom:50px;
+}
+
+.status{
+  display:inline-block;
+
+  padding:10px 16px;
+
+  border-radius:999px;
+
+  background:rgba(0,255,136,0.08);
+
+  border:1px solid rgba(0,255,136,0.12);
+
+  color:#00ff88;
+
+  font-size:0.82rem;
+}
+
+.feed-header h1{
+  font-size:4rem;
+
+  margin:25px 0 15px;
+}
+
+.feed-header p{
+  color:#92a097;
+
+  line-height:1.8;
+
+  font-size:1.08rem;
+}
+
+/* FEED */
+
+.feed-container{
+  width:min(800px, 92%);
+
+  margin:auto;
+
+  display:flex;
+  flex-direction:column;
+
+  gap:28px;
+}
+
+/* POST */
+
+.post-card{
+  background:rgba(7, 15, 7, 0.72);
+
+  border:1px solid rgba(0,255,136,0.1);
+
+  border-radius:30px;
+
+  overflow:hidden;
+
+  backdrop-filter:blur(10px);
+
+  transition:0.35s;
+}
+
+.post-card:hover{
+  transform:translateY(-4px);
+
+  border-color:rgba(0,255,136,0.25);
+
+  box-shadow:
+  0 0 35px rgba(0,255,136,0.06);
+}
+
+/* TOP */
+
+.post-top{
+  padding:24px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.user{
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+
+.avatar{
+  width:52px;
+  height:52px;
+
+  border-radius:50%;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  background:#00ff88;
+
+  color:#02150c;
+
+  font-weight:700;
+}
+
+.green{
+  background:#00ff88;
+}
+
+.purple{
+  background:#8b5cf6;
+  color:white;
+}
+
+.blue{
+  background:#3b82f6;
+  color:white;
+}
+
+.user h3{
+  margin-bottom:4px;
+}
+
+.user span{
+  color:#7f8e83;
+  font-size:0.9rem;
+}
+
+/* TAG */
+
+.tag{
+  padding:8px 14px;
+
+  border-radius:999px;
+
+  background:rgba(0,255,136,0.08);
+
+  color:#00ff88;
+
+  font-size:0.75rem;
+
+  font-weight:600;
+}
+
+.urgent{
+  background:rgba(255, 70, 70, 0.15);
+  color:#ff6d6d;
+}
+
+/* CONTENT */
+
+.post-content{
+  padding:0 24px 26px;
+}
+
+.post-content p{
+  color:#d7e0da;
+
+  line-height:1.9;
+
+  font-size:1rem;
+}
+
+/* IMAGE */
+
+.post-image{
+  width:100%;
+  overflow:hidden;
+}
+
+.post-image img{
+  width:100%;
+
+  height:420px;
+
+  object-fit:cover;
+
+  display:block;
+
+  transition:0.5s;
+}
+
+.post-card:hover .post-image img{
+  transform:scale(1.03);
+}
+
+/* RESPONSIVO */
+
+@media(max-width:760px){
+
+  .header{
+    flex-direction:column;
+    gap:20px;
+  }
+
+  nav{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .feed-header h1{
+    font-size:2.7rem;
+  }
+
+  .post-top{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:18px;
+  }
+
+  .post-image img{
+    height:260px;
+  }
+
+}
